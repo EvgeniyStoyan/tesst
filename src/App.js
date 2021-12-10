@@ -1,37 +1,29 @@
-import React from "react";
-import Counter from "./components/Counter";
+// import logo from "./logo.svg";
+import "./App.css";
+import React, { useState } from "react";
 
-const App = () => (
-  <>
-    <h1>Состояние компонента</h1>
-    <Counter />
-  </>
-);
+function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <>
+      Счёт: {count}
+      <button onClick={() => setCount()}>Сбросить</button>
+      <button onClick={() => setCount((prevCount) => prevCount - 1)}>-</button>
+      <button onClick={() => setCount((prevCount) => prevCount + 1)}>+</button>
+    </>
+  );
+}
 
 export default App;
 
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
+// function Counter({initialCount}) {
+//   const [count, setCount] = useState(initialCount);
 //   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
+//     <>
+//       Счёт: {count}
+//       <button onClick={() => setCount(initialCount)}>Сбросить</button>
+//       <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+//       <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+//     </>
 //   );
 // }
-
-// export default App;
