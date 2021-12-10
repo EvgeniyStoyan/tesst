@@ -7,8 +7,13 @@ class Counter extends Component {
       <div className="Counter">
         <span className="Counter__value">0</span>
         <div className="Counter__controls">
-          <button type="button">Increment</button>
-          <button type="button">Decrement</button>
+          <button type="button">Increment Value</button>
+          <button type="button">Decrement Value</button>
+          <button type="button"> Value</button>
+
+          <button type="button">Increment Value</button>
+          <button type="button">Decrement Value</button>
+          <button type="button"> Value</button>
         </div>
       </div>
     );
